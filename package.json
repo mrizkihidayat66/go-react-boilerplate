@@ -1,0 +1,17 @@
+{
+  "name": "go-react-boilerplate",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev:web": "npm --prefix web run dev",
+    "dev:go": "go run ./cmd/server",
+    "build": "node scripts/build.mjs",
+    "test": "go test ./internal/...",
+    "test:e2e": "npx playwright test",
+    "typecheck": "npm --prefix web run typecheck"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}

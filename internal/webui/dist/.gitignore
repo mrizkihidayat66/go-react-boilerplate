@@ -1,0 +1,5 @@
+# Build output — populated by `npm run build`. This marker keeps the
+# directory in git so `//go:embed all:dist` resolves on a fresh clone
+# (before the SPA has been built). Everything else here is ignored.
+*
+!.gitignore

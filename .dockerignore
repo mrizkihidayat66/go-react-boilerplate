@@ -1,0 +1,15 @@
+bin/
+data/
+node_modules/
+web/node_modules/
+web/dist/
+# The image always builds the SPA fresh in stage 1; never embed a stale
+# local build (also git-ignored except the marker).
+internal/webui/dist
+test-results/
+playwright-report/
+.git/
+.env
+docs/
+e2e/
+.claude/

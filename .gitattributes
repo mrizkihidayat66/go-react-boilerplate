@@ -1,0 +1,21 @@
+# Normalize line endings in the repository: LF in the object store for
+# every text file, so Go sources stay gofmt-clean and shell/CI scripts
+# run on Linux regardless of the committer's OS. Windows checkouts still
+# get CRLF working-tree files for the types where that matters.
+* text=auto eol=lf
+
+# Windows-only helpers keep CRLF in the working tree.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary — never touch.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Keep lockfiles exact; diff noise on them is never useful.
+package-lock.json -diff
+web/package-lock.json -diff

@@ -1,0 +1,35 @@
+# Go
+bin/
+*.exe
+*.test
+*.out
+
+# Environment
+.env
+
+# Data (SQLite databases)
+data/
+
+# Node
+node_modules/
+*.tsbuildinfo
+
+# Build output is embedded into the binary at build time; only the
+# .gitignore marker inside dist is tracked.
+internal/webui/dist/*
+!internal/webui/dist/.gitignore
+
+# Test artifacts
+test-results/
+playwright-report/
+coverage/
+
+# Editor/OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local [CC] tooling (per-machine dev-server launch config)
+.claude/
